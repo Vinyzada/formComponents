@@ -1,9 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue';
+import authFormVue from './components/authForm.vue';
 </script>
 
 <template>
+  <authFormVue />
 </template>
 
-<style scoped>
+<style>
 </style>
