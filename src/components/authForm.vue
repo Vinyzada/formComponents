@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 const emit = defineEmits(['salvar'])
 
+
 const estados = ([
   { 'name': 'Acre', 'sigla': 'AC' },
   { 'name': 'Alagoas', 'sigla': 'AL' },
@@ -70,6 +71,7 @@ const user = ref({
     linguage: '',
     bio: '',
     cep: cep,
+    hobbies: [],
 })
 const viewPerfil = ref(0)
 function salvar(){
@@ -148,17 +150,17 @@ function salvar(){
         <div class="hobbies">
           <h3 class="font-semibold py-2">hobbies</h3>
           <div>
-            <input type="checkbox" id="hobbieMusic" /><label for="hobbieMusic">Musica</label>
+            <input type="checkbox" id="hobbieMusic" v-model="user.hobbies" value="Musica" /><label for="hobbieMusic">Musica</label>
           </div>
           <div>
-            <input type="checkbox" id="hobbieWorkout" /><label for="hobbieWorkout">Exercitar-se</label>
+            <input type="checkbox" id="hobbieWorkout" v-model="user.hobbies" value="Exercitar-se" /><label for="hobbieWorkout">Exercitar-se</label>
           </div>
-          <div><input type="checkbox" id="hobbieSwim" /><label for="hobbieSwim">Nadar</label></div>
+          <div><input type="checkbox" id="hobbieSwim" v-model="user.hobbies" value="Nadar"  /><label for="hobbieSwim">Nadar</label></div>
           <div>
-            <input type="checkbox" id="hobbieTravel" /><label for="hobbieTravel">Viajar</label>
+            <input type="checkbox" id="hobbieTravel" v-model="user.hobbies" value="Viajar"  /><label for="hobbieTravel">Viajar</label>
           </div>
           <div>
-            <input type="checkbox" id="hobbieSport" /><label for="hobbieSport">Esporte</label>
+            <input type="checkbox" id="hobbieSport" v-model="user.hobbies" value="Esportes" /><label for="hobbieSport">Esportes</label>
           </div>
         </div>
         <div class="lingprog">

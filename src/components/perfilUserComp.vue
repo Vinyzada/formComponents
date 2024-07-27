@@ -6,62 +6,62 @@ defineProps(['user'])
         <div class="textChroma flex mb-14">Perfil</div>
         <div class="flex gap-1 w-full">
             <div class="flex flex-col input w-full">
-                <input type="text" id="userName" disabled v-model="user.nome" />
+                <input type="text" id="userName" disabled :value="user.nome" />
                 <span>Nome</span>
             </div>
             <div class="flex flex-col input w-1/3">
                 <input type="text" id="userDataNasc" onfocus="(this.type='date')" onblur="(this.type='text')"
-                    v-model="user.datanasc" disabled />
+                    :value="user.datanasc" disabled />
                 <span>Nascimento</span>
             </div>
             <div class="flex flex-col input w-1/3">
-                <input type="text" id="userDataNasc" v-model="user.sexo" disabled />
+                <input type="text" id="userDataNasc" :value="user.sexo" disabled />
                 <span>Sexo</span>
             </div>
         </div>
         <div class="flex w-full gap-4">
             <div class="flex flex-col input w-auto">
-                <input type="tel" id="userTell" maxlength="9" minlength="9" v-model="user.number"
+                <input type="tel" id="userTell" maxlength="9" minlength="9" :value="user.number"
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..?)\../g, '$1');" disabled />
                 <span>Telefone</span>
             </div>
             <div class="flex flex-col input w-4/5">
-                <input type="text" id="userEmail" v-model="user.email" disabled />
+                <input type="text" id="userEmail" :value="user.email" disabled />
                 <span>Email</span>
             </div>
         </div>
         <div class="flex w-full gap-4">
             <div class="flex flex-col input w-full">
-                <input type="text" disabled v-model="user.cep" />
+                <input type="text" disabled :value="user.cep" />
                 <span>CEP</span>
             </div>
             <div class="flex flex-col input w-full">
-                <input type="text" id="userCity" v-model="user.cidade" disabled />
+                <input type="text" id="userCity" :value="user.cidade" disabled />
                 <span>Cidade</span>
             </div>
         </div>
         <div class="flex w-full gap-4">
             <div class="flex flex-col input w-full">
-                <input type="text" name="" id="" v-model="user.estado" disabled />
+                <input type="text" name="" id="" :value="user.estado" disabled />
                 <span>estado</span>
             </div>
             <div class="flex flex-col input w-full">
-                <input type="text" id="userAdress" v-model="user.endereco" disabled />
+                <input type="text" id="userAdress" :value="user.endereco" disabled />
                 <span>endereco</span>
             </div>
         </div>
         <div class="flex w-full gap-4">
             <div class="flex flex-col input w-1/2">
-                <input type="password" id="userPassword" v-model="user.senha" disabled />
+                <input type="password" id="userPassword" :value="user.senha" disabled />
                 <span>senha</span>
             </div>
             <div class="flex flex-col input w-1/2">
-                <input type="text" id="userLinguage" v-model="user.linguage" disabled />
+                <input type="text" id="userLinguage" :value="user.linguage" disabled />
                 <span>linguagem favorita</span>
             </div>
             <div class="flex flex-col input w-1/2">
-                <input type="text" id="userLinguage" v-model="user.hobbies" disabled />
-                <span>linguagem favorita</span>
+                <input type="text" id="userLinguage" :value="user.hobbies" disabled />
+                <span>hobbies</span>
             </div>
         </div>
         <input

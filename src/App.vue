@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import authFormVue from './components/authForm.vue';
-import perfilUser from './components/perfilUser.vue';
+import perfilUser from './components/perfilUserComp.vue';
 
 const viewPerfil = ref(false)
 const user = ref({
@@ -9,11 +9,13 @@ const user = ref({
     email: '',
     sexo: '',
     senha: '',
+    number: '',
     datanasc: '',
     endereco: '',
     cidade: '',
     estado: '',
-    bio: '',
+    linguage: '',
+    bio: [],
     cep: '',
 })
 
@@ -30,7 +32,7 @@ console.log(user.value.nome)
 
 <template>
   <perfilUser :user="user" @voltar="retornar" v-if="viewPerfil"/>
-  <authFormVue :user="user" @salvar="salvarInfo" v-else/>
+  <authFormVue @salvar="salvarInfo" v-else/>
 </template>
 
 <style>
