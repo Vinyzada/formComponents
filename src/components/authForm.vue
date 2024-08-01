@@ -73,11 +73,17 @@ const user = ref({
     cep: cep,
     hobbies: [],
 })
+const senhaVerify = ref('')
 const viewPerfil = ref(0)
 function salvar(){
+  if(user.value.senha == senhaVerify.value){
     emit('salvar', { ...user.value });
     viewPerfil.value++
   }
+  else{
+    alert('Senha Incompativeis')
+  }
+}
 </script>
 
 <template>
@@ -142,7 +148,7 @@ function salvar(){
           <span>senha</span>
         </div>
         <div class="flex flex-col input w-1/2">
-          <input type="password" id="userConfirmPassword" required />
+          <input type="password" id="userConfirmPassword" v-model="senhaVerify" required />
           <span>confirme sua senha</span>
         </div>
       </div>
